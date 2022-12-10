@@ -8,7 +8,7 @@ defmodule SchedullerWeb.AuthController do
       Scheduller.Guardian.encode_and_sign(%{id: "4e07d444-e97e-4dbe-8caf-8ed9a1e0d9fa" ,email: "vinnyaoe@gmail.com", name: "teste"})
     conn
     |> put_status(:ok)
-    |> render("login.json", access_token: token)
+    |> render(SchedullerWeb.AuthView, access_token: token)
 
 
   end
